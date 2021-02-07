@@ -1,0 +1,31 @@
+/*
+A method run is declared in inteface Runnable, alse there are two implementation of it: in the Car class and in the Plane class. 
+There is a public static field ArrayList<Runnable> in the Solution class, alse there are 2 static methods:
+addToList(Runnable), which adds an element to the list, getting as a input parameter and a method runList(), which calls the method run() for every element of list.
+Your task — create these methods.
+*/
+package com.javarush.task.pro.task18.task1801;
+
+import java.util.ArrayList;
+
+
+public class Solution {
+    public static ArrayList<Runnable> list = new ArrayList<>();
+
+    public static void main(String[] args) {
+        addToList(new Car());
+        addToList(new Plane());
+
+        runList();
+    }
+
+    public static void addToList(Runnable runnable) {
+        list.add(runnable);
+    }
+
+    public static void runList() {
+        for (Runnable value: list) {
+            value.run();
+        }
+    }
+}
