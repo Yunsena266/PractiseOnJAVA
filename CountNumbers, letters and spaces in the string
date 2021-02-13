@@ -1,0 +1,51 @@
+/*
+Create methods countDigits(String), countLetters(String), countSpaces(String), which should return an amount of numbers, letters and spaces in the string.
+
+*/
+package TasksOnJava
+public class Solution {
+    public static void main(String[] args) {
+        String string = """
+                Do not go gentle into that good night,
+Old age should burn and rave at close of day
+                """;
+
+        System.out.println("The amount of numbers in the string : " + countDigits(string));
+        System.out.println("The amount of letters in the string : " + countLetters(string));
+        System.out.println("The amount of spaces in the string : " + countSpaces(string));
+    }
+
+    public static int countDigits(String string) {
+        int count = 0;
+        char [] Letters = string.toCharArray(); 
+        for (int i = 0;i< Letters.length;i++) {
+            if (Character.isDigit(Letters[i])) {
+                count ++;
+            }
+            
+        }
+        return count;
+    }
+
+    public static int countLetters(String string) {
+        int count = 0;
+        char [] Letters = string.toCharArray(); 
+        for (int i = 0;i< Letters.length;i++) {
+            if (Character.isLetter(Letters[i])) {
+                count ++;
+            }
+            
+        }return count;
+    }
+
+    public static int countSpaces(String string) {
+        int count = 0;
+        char [] Letters = string.toCharArray(); 
+        for (int i = 0;i< Letters.length;i++) {
+            if (Character.isWhitespace(Letters[i])) {
+                count ++;
+            }
+        
+    }return count;
+}
+}
