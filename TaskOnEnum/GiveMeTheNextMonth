@@ -1,0 +1,20 @@
+/*
+
+Create a method getNextMonth, which should return the next month. In the case of last month return the first month.
+*/
+
+
+package TasksOnJava
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println(getNextMonth(Month.JANUARY));
+        System.out.println(getNextMonth(Month.JULY));
+    }
+
+    public static Month getNextMonth(Month month) {
+        int index = month.ordinal();
+        int NextIndex = month == Month.DECEMBER ? 0: month.ordinal() + 1;
+        return Month.values()[NextIndex];
+    }
+}
