@@ -1,0 +1,21 @@
+/*
+TaskOnPrimitiveTypes
+Create a method which accepts 4 arguments and returns "true" only when there are 2 true among his arguments. In all other cases this method should return false.
+*/
+
+
+package TasksOnJava;
+
+public class BitShifter {
+
+	public static void main (String[] args) {
+		System.out.print(flipBit(0,1));
+
+		}
+
+  public static int flipBit(int value, int bitIndex) {
+    return value ^ (1 << (bitIndex - 1));
+  }
+
+}
+
