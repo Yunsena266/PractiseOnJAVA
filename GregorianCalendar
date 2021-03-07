@@ -4,7 +4,7 @@ Create a method which calculates an amount of leap years from the beginning of o
 */
 
 
-package TaskOnJava
+package TaskOnJava;
 
 public class GregorianCalendar {
   public static void main (String[] args) {
