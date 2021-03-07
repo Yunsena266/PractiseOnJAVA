@@ -1,0 +1,18 @@
+/*
+Create a method which accepts 4 arguments and returns "true" only when there are 2 true among his arguments. In all other cases this method should return false.
+*/
+
+
+package TasksOnJava;
+
+public class BooleanFunction {
+
+	public static void main (String[] args) {
+		  System.out.print(booleanExpression(true, true, false,false));
+		}
+
+public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
+      return (((a & b) ^ (c & d)) ^ ((a & c) ^ (b & d)) ^ ((a & d) ^ (b & c))) & !(a ^b ^c ^d)  ;
+  }
+}
+
