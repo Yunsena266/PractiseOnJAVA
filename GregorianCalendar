@@ -1,0 +1,22 @@
+/*
+A year is leap year in two cases: either it is a multiply of 4, but not multiply of 100 or it is a multiply of 400.
+Create a method which calculates an amount of leap years from the beginning of our era (the first year) to a given year inclusive.
+*/
+
+
+package TaskOnJava
+
+public class GregorianCalendar {
+  public static void main (String[] args) {
+      System.out.print(leapYearCount(100));
+  }
+
+
+  public static int leapYearCount(int year) {
+         int a =  (year / 4) ;
+         int b = (year / 100) ;
+         int c =  (year / 400);
+         return a- b + c;
+    }
+
+}
